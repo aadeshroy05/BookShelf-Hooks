@@ -4,7 +4,7 @@ import { getAll, update } from './BookApi'
 
 const MyRead = () => {
     const [Books, setBooks] = useState([]);
-    const [showSearchPage, setShowSearchPage] = useState(false);
+    // const [showSearchPage, setShowSearchPage] = useState(false);
 
     const getBook = async () => {
         try {
@@ -19,6 +19,7 @@ const MyRead = () => {
     const updateBook = async (book, shelf) => {
         try {
             console.log("shelf = ", shelf);
+            // console.log(showSearchPage);
             const res = await update(book, shelf);
             getBook();
             console.log(res);
@@ -134,9 +135,9 @@ const MyRead = () => {
                         </div>
                     </div>
                 </div>
-                <div className="open-search">
+                {/* <div className="open-search">
                     <button onClick={() => setShowSearchPage(true)}>Add a book</button>
-                </div>
+                </div> */}
             </div>
 
         </div>
